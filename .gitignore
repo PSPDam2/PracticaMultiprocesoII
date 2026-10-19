@@ -12,14 +12,11 @@ target/
 *.ipr
 out/
 
-# Archivos temporales de IntelliJ
-/shelf/
-/workspace.xml
-/queries/
-/dataSources/
-/dataSources.local.xml
-/httpRequests/
+# Configuración de Eclipse
+.settings/
+.classpath
+.project
 
-# Archivos del sistema operativo
+# Archivos temporales del sistema
 .DS_Store
 Thumbs.db
