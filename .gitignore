@@ -1,0 +1,25 @@
+# Compilación y archivos generados (Maven)
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Configuración e índices de IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Archivos temporales de IntelliJ
+/shelf/
+/workspace.xml
+/queries/
+/dataSources/
+/dataSources.local.xml
+/httpRequests/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
