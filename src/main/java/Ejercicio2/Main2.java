@@ -13,7 +13,7 @@ public class Main2 {
         Scanner sc = new Scanner(System.in);
         List<String> datos = new ArrayList<>();
  
-        // Se piden números hasta que se escriba "*" (sin validar nada)
+        // se piden numeros hasta que se escriba "*"
         String linea;
         do {
             System.out.println("Escribe un número:");
@@ -28,7 +28,7 @@ public class Main2 {
             pb.redirectErrorStream(true);
             Process p = pb.start();
  
-            // Pasamos los datos recogidos a la entrada estándar del hijo
+            // pasamos los datos a la entrada del hijo
             try (BufferedWriter bw = new BufferedWriter(
                     new OutputStreamWriter(p.getOutputStream()))) {
                 for (String d : datos) {
@@ -37,7 +37,7 @@ public class Main2 {
                 }
             }
  
-            // Leemos toda la salida del hijo
+            // leemos toda la salida del hijo
             List<String> salida = new ArrayList<>();
             try (BufferedReader br = new BufferedReader(
                     new InputStreamReader(p.getInputStream()))) {
@@ -46,7 +46,7 @@ public class Main2 {
             }
  
             int codigo = p.waitFor();
-            if (codigo > 127) codigo -= 256; //en linux 255=-1//254=-2
+            if (codigo > 127) codigo -= 256; //en linux 255=-1 ##### 254=-2
  
             System.out.println("Valor de Salida: " + codigo);
             salida.forEach(System.out::println);
