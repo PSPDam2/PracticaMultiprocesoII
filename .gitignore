@@ -1,4 +1,5 @@
-# Compilación y archivos generados (Maven)
+# Compilación y archivos generados (Java y Maven)
+bin/
 target/
 *.class
 *.jar
